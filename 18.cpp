@@ -7,7 +7,7 @@ class Array {
     private:
     int lbound;
     int hbound;
-    vector<T> data;
+    vector<T> datas;
     boundsCheckingStatus checkingBounds;
     public:
     enum boundsCheckingStatus {
@@ -28,4 +28,5 @@ class Array {
     // 在外面定义的时候不需要加friend
     // 友元函数在所有实际应用中都是类的接口的一部分，因此友元函数影响类的接口的完整性和最小性
     friend ostream& operator<<(ostream& out, const Array& rhs);
+    friend istream& operator>>(istream& in, Array& rhs);
 };
