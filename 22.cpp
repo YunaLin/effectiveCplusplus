@@ -19,3 +19,9 @@ void printNameAndDisplay(const Window& w) {
     cout << w.getName() << endl;
     w.display();
 }
+
+// 传入的参数值是引用，同时返回的也是引用
+// 如果传入和返回的是值，会调用大量的构造函数和析构函数
+const Student& returnStudent(const Student& s) {
+    return s;
+}
